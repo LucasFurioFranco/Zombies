@@ -1,0 +1,29 @@
+1.0
+propostas:
+	criar um protótipo jogável	
+realizações:
+	atira a partir do centro do jogador
+	o tiro acerta os zumbis
+	existe colizão de zumbis, players e objetos
+	tudo criado e adicionado em um mapa apenas (mapa de tamanho indeterminado)
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+1.1
+proposta:
+	separar o mapa em vários sub-mapas
+	processar apenas 9 sub-mapas por jogador (para colisão, zumbis e tiros)
+	fazer os tiros partirem da ponta da arma
+realizações:
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+2.0
+proposta:
+	separar o jogo em cliente/servidor
+realizações:
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,30 @@
+//Gera uma matriz de transformação e muda a base de coordenadas da global {(1,0),(0,1)} para uma
+//base referente à um objeto, jogador ou zumbi
+function transform_base(tx, ty, angle, coord){	//tx e ty: coeficientes de translação; angle: ângulo de rotação
+	var A = Math.cos(-angle);
+	var B = Math.sin(-angle);
+	var TX = -tx;
+	var TY = -ty;
+	var x = coord[0];
+	var y = coord[1];
+
+	var p1 = x*A - y*B + TX*A - TY*B;
+	var p2 = x*B + y*A + TY*A + TX*B;
+	return [p1, p2];
+}
+
+function create_transform_matrix(tx, ty, angle){
+	var A = Math.cos(-angle);
+	var B = Math.sin(-angle);
+	var TX = -tx;
+	var TY = -ty;
+	return [
+			[A,    -B,    TX*A-TY*B],
+			[B,     A,    TY*A+TX*B],
+			[0,     0,        1    ]];
+}
+
+function mult_matrix_vector(M, p){
+	return [(M[0][0]*p[0] + M[0][1]*p[1] + M[0][2]), (M[1][0]*p[0] + M[1][1]*p[1] + M[1][2])];
+}
+
